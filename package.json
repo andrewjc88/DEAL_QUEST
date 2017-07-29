@@ -1,0 +1,40 @@
+{
+  "name": "taco-run",
+  "version": "1.0.0",
+  "description": "Taco Binge Map App",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andrewjc88/Taco-Run.git"
+  },
+  "keywords": [
+    "Tacos",
+    "google",
+    "maps",
+    "api",
+    "binge"
+  ],
+  "author": "Andrew Cornell",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andrewjc88/Taco-Run/issues"
+  },
+  "homepage": "https://github.com/andrewjc88/Taco-Run#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-install": "^1.1.0",
+    "gulp-livereload": "^3.8.1",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-plumber": "^1.1.0",
+    "gulp-sourcemaps": "^2.6.0",
+    "gulp-uglify": "^3.0.0"
+  },
+  "dependencies": {
+    "static-server": "^2.0.5"
+  }
+}
