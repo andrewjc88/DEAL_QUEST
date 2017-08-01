@@ -1,0 +1,12 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex-box;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+#taco-img {
+    height: 20vh;
+}
