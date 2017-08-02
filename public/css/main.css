@@ -1,4 +1,4 @@
-body {
+/*body {
     font-family: Arial, sans-serif;
     display: flex-box;
     align-items: center;
@@ -10,3 +10,12 @@ body {
 #taco-img {
     height: 20vh;
 }
+
+#map {
+  bottom:0px;
+  height: 100%;
+  left: 0px;
+  top: 100px;
+  position: absolute;
+  right: 0px;
+}*/
