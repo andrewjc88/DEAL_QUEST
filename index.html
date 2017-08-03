@@ -1,0 +1,49 @@
+<!doctype html>
+<html class="no-js" lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foundation for Sites</title>
+    <link rel="stylesheet" href="css/foundation.css">
+    <link rel="stylesheet" href="css/app.css">
+  </head>
+  <body class="row column">
+
+    <div class="off-canvas-wrapper">
+      <div class="off-canvas position-left" id="revealPanel" data-off-canvas>
+        <ul>
+          <li>
+            <button class="close-button" aria-label="Close menu" type="button" data-close>
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </li>
+          <li>
+            <label>Change Quest Zone
+              <input type="text" placeholder="zip code" required pattern="number" id="questArea" >
+              <input id="beginQuest" class="button large" type="button" value="Begin Taco Quest!">
+            </label>
+          </li>
+        </ul>
+      </div>
+      <div class="off-canvas-content" data-off-canvas-content>
+        <div class="title-bar">
+          <div class="title-bar-left">
+            <button type="button" class="menu-icon" data-toggle="revealPanel"></button>
+            <span class="title-bar-title ">TACO QUEST</span>
+          </div>
+        </div>
+        <div class="responsive-embed " id="map">
+           <!-- <div width="1200px" height"90px"  frameborder="0"></div>  -->
+        </div>
+      </div>
+    </div>
+
+    <script async defer src= "https://maps.googleapis.com/maps/api/js?libraries=drawing&key=AIzaSyCJXYAdvBybNKo1VARPHykQxv8x-ZCoE4w&v=3&callback=initMap"></script>
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/vendor/what-input.js"></script>
+    <script src="js/vendor/foundation.js"></script>
+    <script src="js/vendor/knockout.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
