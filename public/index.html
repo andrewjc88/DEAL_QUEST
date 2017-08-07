@@ -13,15 +13,13 @@
     <div class="off-canvas-wrapper">
 
       <div class="off-canvas position-left" id="revealPanel" data-off-canvas>
-        <button class="close-button" aria-label="Close menu" type="button" data-close>
-          <span aria-hidden="true">&times;</span>
-        </button>
         <ul class="vertical menu">
-          <li><h4>Change Quest Zone</h4></li>
-          <li><input  class="row" type="text" placeholder="zip code" required pattern="number" id="questArea" ></li>
-          <div class="row">
-            <li><input id="beginQuest" class="button large" type="button" value="Begin Taco Quest!"></li>
-          </div>
+          <li><a><button class="close-button" aria-label="Close menu" type="button" data-close>
+          <span aria-hidden="true">&times;</span>
+        </button></a></li>
+          <li><a><h4>Change Quest Zone</h4/></a></li>
+          <li><a><input  class="row" type="text" placeholder="zip code" required pattern="number" id="questArea" ></a></li>
+          <li><a><input id="beginQuest" class="button large" type="button" value="Begin Taco Quest!"></a></li>
         </ul>
       </div>
 
@@ -36,11 +34,11 @@
       </div>
     </div>
 
-    <script async defer src= "https://maps.googleapis.com/maps/api/js?libraries=drawing&key=AIzaSyCJXYAdvBybNKo1VARPHykQxv8x-ZCoE4w&v=3&callback=initMap"></script>
-    <script src="/vendor/jquery.js"></script>
-    <script src="/vendor/what-input.js"></script>
-    <script src="/vendor/foundation.min.js"></script>
-    <script src="/vendor/knockout.js"></script>
-    <script src="/dist/app.js"></script>
+    <script type="text/javascript" src= "https://maps.googleapis.com/maps/api/js?libraries=drawing&key=AIzaSyCJXYAdvBybNKo1VARPHykQxv8x-ZCoE4w&v=3"></script>
+    <script type="text/javascript" src="/vendor/jquery.js"></script>
+    <script type="text/javascript" src="/vendor/what-input.js"></script>
+    <script type="text/javascript" src="/vendor/foundation.min.js"></script>
+    <script type="text/javascript" src="/vendor/knockout.js"></script>
+    <script type="text/javascript" src="/dist/app.js"></script>
   </body>
 </html>
