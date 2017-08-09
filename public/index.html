@@ -4,37 +4,50 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Foundation for Sites</title>
+    <title>Deal Quest</title>
     <link rel="stylesheet" href="/vendor/foundation.min.css">
-    <link rel="stylesheet" href="/dist/styles.css">
+    <link rel="stylesheet" href="/dist/app.css">
   </head>
   <body>
 
     <div class="off-canvas-wrapper">
 
+      <!-- Off canvas search area -->
       <div class="off-canvas position-left" id="revealPanel" data-off-canvas>
         <ul class="vertical menu">
-          <li><a><button class="close-button" aria-label="Close menu" type="button" data-close>
-          <span aria-hidden="true">&times;</span>
-        </button></a></li>
-          <li><a><h4>Change Quest Zone</h4/></a></li>
-          <li><a><input  class="row" type="text" placeholder="zip code" required pattern="number" id="questArea" ></a></li>
-          <li><a><input id="beginQuest" class="button large" type="button" value="Begin Taco Quest!"></a></li>
+          <li>
+            <a><button class="close-button" aria-label="Close menu" type="button" data-close>
+            <span aria-hidden="true">&times;</span>
+            </button></a>
+          </li>
+          <li>
+            <a><input type="search" placeholder="Search Listings" id="searchInput" ></a>
+          </li>
         </ul>
       </div>
 
       <div class="off-canvas-content" data-off-canvas-content>
-        <div class="title-bar">
+        <div class="vertical medium-horixontal title-bar">
+
+          <!-- Title bar title -->
           <div class="title-bar-left">
             <button type="button" class="menu-icon" data-toggle="revealPanel"></button>
-            <span class="title-bar-title ">TACO QUEST</span>
+            <span class="title-bar-title large-centered">DE∆L QUE$T</span>
+          </div>
+          
+          <!-- Title bar zip code input -->
+          <div class="top-bar-right">
+            <ul class="menu">
+              <li><input data-bind="value: zipInput" type="search" placeholder="Input Zip Code"></li>
+              <li><button data-bind="click: newLoc" type="button" class="button">Search</button></li>
+            </ul>
           </div>
         </div>
         <div class="responsive-embed " id="map"></div>
       </div>
     </div>
 
-    <script type="text/javascript" src= "https://maps.googleapis.com/maps/api/js?libraries=drawing&key=AIzaSyCJXYAdvBybNKo1VARPHykQxv8x-ZCoE4w&v=3"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=drawing&key=AIzaSyCJXYAdvBybNKo1VARPHykQxv8x-ZCoE4w&v=3"></script>
     <script type="text/javascript" src="/vendor/jquery.js"></script>
     <script type="text/javascript" src="/vendor/what-input.js"></script>
     <script type="text/javascript" src="/vendor/foundation.min.js"></script>

@@ -1,11 +1,11 @@
-// 'use strict';
+'use strict';
 
 $(document).foundation();
 
 function ViewModel(){
 
-  this.tacoShops = ko.observableArray([]);
-  this.tacoShops = ko.observable('94706');
+  this.zipInput = ko.observable('');
+  this.gDeal = ko.observableArray([]);
   this.zipSearchButton = ko.observable();
 
   var self = this;
@@ -13,15 +13,12 @@ function ViewModel(){
   var polygon = null;
   var map;
 
-  document.getElementById('beginQuest').addEventListener('click', function() {
-    questArea();
-  });
-
-  function questArea() {
+  this.newLoc = function() {
+    var currentLoc = this.zipInput();
     // Initialize geocoder
     var geocoder = new google.maps.Geocoder();
     // Get the address of place that the user entered.
-    var address = document.getElementById('questArea').value;
+    var address = currentLoc;
     // Make sure input isn't blank.
     if (address == '') {
       window.alert('You must enter an zip code to start your Taco Quest!');
@@ -40,11 +37,13 @@ function ViewModel(){
         }
       );
     }
+  };
+
+  function grouponDeals() {
+
+    var gUrl = 'https://partner-int-api.groupon.com/deals.json?';
   }
 
-  function yelpApi() {
-
-  }
 
   function initMap() {
 

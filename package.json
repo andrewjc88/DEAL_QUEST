@@ -1,5 +1,5 @@
 {
-  "name": "taco_run.1.0",
+  "name": "DE∆L_QUE$T.1.0",
   "version": "1.0.0",
   "description": "Taco adenture game.",
   "main": "index.js",
@@ -19,6 +19,8 @@
     "gulp-uglify": "^3.0.0"
   },
   "dependencies": {
-    "static-server": "^2.0.5"
+    "require": "^2.4.20",
+    "static-server": "^2.0.5",
+    "yelp-fusion": "^1.0.3"
   }
 }
