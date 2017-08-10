@@ -4,14 +4,15 @@ $(document).foundation();
 
 function ViewModel(){
 
-  this.zipInput = ko.observable('');
-  this.gDeal = ko.observableArray([]);
-  this.zipSearchButton = ko.observable();
+  this.zipInput = ko.observable(''); // Zipcode input field 
+  this.gDeal = ko.observableArray([]); // inital deals array
+
 
   var self = this;
   var markers = [];
   var polygon = null;
   var map;
+  var initLoc = {lat: 37.7749, lng: -122.4194};
 
   this.newLoc = function() {
     var currentLoc = this.zipInput();
@@ -21,7 +22,7 @@ function ViewModel(){
     var address = currentLoc;
     // Make sure input isn't blank.
     if (address == '') {
-      window.alert('You must enter an zip code to start your Taco Quest!');
+      window.alert('You must enter an zip code to start your Deal Quest!');
     } else {
       // Geocode the address/ area entered to get the center. Then, center the map
       // on it and zoom in.
@@ -37,13 +38,8 @@ function ViewModel(){
         }
       );
     }
+    grouponDeals(initLoc);
   };
-
-  function grouponDeals() {
-
-    var gUrl = 'https://partner-int-api.groupon.com/deals.json?';
-  }
-
 
   function initMap() {
 
@@ -131,11 +127,38 @@ function ViewModel(){
 
 
     map = new google.maps.Map(document.getElementById('map'), {
-      center: {lat: 37.7749, lng: -122.4194},
+      center: initLoc,
       zoom: 15,
       styles: styles,
       mapTypeControl: false,
         
+    });
+    grouponDeals(initLoc);
+  }
+
+  function grouponDeals(location) {
+    var gUrl = "https://partner-api.groupon.com/deals.json?tsToken=IE_AFF_0_200012_212556_0&filters=category:food-and-drink&limit=30&offset=0&division_id=san-francisco";
+    var loc = location;
+
+    // Format location for groupon
+    
+    console.log(location);
+    $.ajax({
+      url: gUrl,
+      dataType: 'jsonp',
+      success: function(data) {
+        console.log(data);
+      }
+      //   var len = data.deals.length;
+      //   for(var i = 0; i < len; i++) {
+      //     var gLoc = data.deals[i].options[0].redemptionLocation[0];
+
+      //     if (data.deals[i].options[0].redemptionLocation[0] === undefined) continue;
+
+      //     var venue = data.deals[i].merchant.name;
+
+      //   }
+      // }
     });
   }
 
@@ -182,15 +205,6 @@ function ViewModel(){
   //     }
   // };
 
-  // Test locations to get started
-  // var locations = [
-  //     {title: 'Park Ave Penthouse', location: {lat: 40.7713024, lng: -73.9632393}},
-  //     {title: 'Chelsea Loft', location: {lat: 40.7444883, lng: -73.9949465}},
-  //     {title: 'Union Square Open Floor Plan', location: {lat: 40.7347062, lng: -73.9895759}},
-  //     {title: 'East Village Hip Studio', location: {lat: 40.7281777, lng: -73.984377}},
-  //     {title: 'TriBeCa Artsy Bachelor Pad', location: {lat: 40.7195264, lng: -74.0089934}},
-  //     {title: 'Chinatown Homey Space', location: {lat: 40.7180628, lng: -73.9961237}}
-  // ];
 
 
 
