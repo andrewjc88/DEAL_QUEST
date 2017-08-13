@@ -1,3 +1,16 @@
 #map {
-    height: 96vh;
+    height: 97vh;
+}
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+#infowindow {
+    max-width: 400px;
+    max-height: 200px;
+}
+#infowindow img {
+    float: left;
+    margin-right: 10px;
 }
