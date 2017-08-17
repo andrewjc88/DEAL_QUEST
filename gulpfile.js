@@ -9,9 +9,9 @@ var sourcemaps = require('gulp-sourcemaps');
 var ghPages = require('gulp-gh-pages');
 
 // Vile paths
-var DIST_PATH = 'public/dist';
-var SCRIPTS_PATH = 'public/scripts/**/*.js';
-var CSS_PATH = 'public/styles/**/*.css';
+var DIST_PATH = 'docs/dist';
+var SCRIPTS_PATH = 'docs/scripts/**/*.js';
+var CSS_PATH = 'docs/styles/**/*.css';
 
 // Styles
 gulp.task('styles', function() {
@@ -57,6 +57,6 @@ gulp.task('watch', function() {
 });
 
 gulp.task('deploy', function() {
-  return public.src('./dist/**/*')
+  return docs.src('./dist/**/*')
     .pipe(ghPages());
 });

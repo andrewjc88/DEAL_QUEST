@@ -193,7 +193,7 @@ var ViewModel = function() {
             zip = dealLoc.postalCode,
             shortAbout = data.deals[i].announcementTitle,
             tags = data.deals[i].tags,
-            show = true
+            show = true;
           
           self.gDeals.push({
             name: name,
@@ -217,7 +217,7 @@ var ViewModel = function() {
   self.makeMarkers = function(deals) {
     // console.log("makeMarkers Ran");
     var iconImg = {
-      url: '/dist/img/gIcon_2.png',
+      url: 'dist/img/gIcon_2.png',
       scaledSize: new google.maps.Size(40, 40)
     };
     

@@ -21,7 +21,6 @@
   },
   "dependencies": {
     "require": "^2.4.20",
-    "static-server": "^2.0.5",
-    "yelp-fusion": "^1.0.3"
+    "static-server": "^2.0.5"
   }
 }
