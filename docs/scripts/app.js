@@ -126,7 +126,7 @@ var ViewModel = function() {
     var address = currentLoc;
 
       // Make sure input isn't blank.
-      if (address == '') {
+      if (address === '') {
         window.alert('You must enter an zip code to start your Deal Quest!');
       } else {
 
@@ -245,13 +245,16 @@ var ViewModel = function() {
 
         self.filteredDeals.push(gMarker);
 
-        gMarker.addListener('click', function() {
-          self.populateInfoWindow(this);
-          console.log(this);
-        });
+        self.listener(gMarker);
 
       }
     }
+  };
+
+  self.listener = function(item){
+    item.addListener('click', function(){
+      self.populateInfoWindow(this);
+    });
   };
 
   self.populateInfoWindow = function(marker) {
