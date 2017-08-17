@@ -1,6 +1,6 @@
 # Welcome to my Deal Quest App! Enjoy!
 Click the following link to start useing the app:
-https://andrewjc88.github.io/DEAL_QUEST/public/
+https://andrewjc88.github.io/DEAL_QUEST/
 ## What?
 This app searches groupon deals based on input city or zipcode in the top right search box.
 
