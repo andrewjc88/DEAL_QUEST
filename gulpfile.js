@@ -6,6 +6,7 @@ var minifyCss = require('gulp-minify-css');
 var autoprefixer = require('gulp-autoprefixer');
 var plumber = require('gulp-plumber');
 var sourcemaps = require('gulp-sourcemaps');
+var ghPages = require('gulp-gh-pages');
 
 // Vile paths
 var DIST_PATH = 'public/dist';
@@ -53,4 +54,9 @@ gulp.task('watch', function() {
     livereload.listen();
     gulp.watch(SCRIPTS_PATH, ['scripts']);
     gulp.watch(CSS_PATH, ['styles']);
+});
+
+gulp.task('deploy', function() {
+  return public.src('./dist/**/*')
+    .pipe(ghPages());
 });
