@@ -33,16 +33,16 @@
       </div>
 
       <div class="off-canvas-content" data-off-canvas-content>
-        <div class="vertical medium-horixontal title-bar">
+        <div class=" top-bar black stacked-for-small">
 
           <!-- Title bar title -->
-          <div class="title-bar-left">
+          <div class="top-bar-left">
             <button type="button" class="menu-icon" data-toggle="revealPanel"></button>
-            <span class="title-bar-title large-centered">DE∆L QUE$T</span>
+            <span class="title-bar-title large-centered">DE∆L&nbspQUE$T</span>
           </div>
           
           <!-- Title bar zip code input -->
-          <div class="top-bar-right columns">
+          <div class="top-bar-right ">
             <ul class="menu">
               <li><input data-bind="value: zipInput" type="search" placeholder="City or Zip Code"></li>
               <li><button data-bind="click: newLoc" type="button" class="button">Get Deals!</button></li>
@@ -57,6 +57,6 @@
     <script type="text/javascript" src="vendor/foundation.min.js"></script>
     <script type="text/javascript" src="vendor/knockout.js"></script>
     <script type="text/javascript" src="dist/app.js"></script>
-    <script sync defer type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=drawing&key=AIzaSyCJXYAdvBybNKo1VARPHykQxv8x-ZCoE4w&v=3&&callback=initMap" ></script>            
+    <script async defer type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=drawing&key=AIzaSyCJXYAdvBybNKo1VARPHykQxv8x-ZCoE4w&v=3&&callback=initMap" ></script>            
   </body>
 </html>

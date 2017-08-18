@@ -210,6 +210,9 @@ var ViewModel = function() {
           });
         }
         self.makeMarkers(self.gDeals());
+      },
+      error: function() {
+        alert("There was a problem Loading groupon deals!");
       }
     });
   };
@@ -254,6 +257,8 @@ var ViewModel = function() {
   self.listener = function(item){
     item.addListener('click', function(){
       self.populateInfoWindow(this);
+      map.setCenter(marker.getPosition());
+
     });
   };
 
