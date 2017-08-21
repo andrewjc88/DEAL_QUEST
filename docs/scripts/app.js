@@ -257,8 +257,6 @@ var ViewModel = function() {
   self.listener = function(item){
     item.addListener('click', function(){
       self.populateInfoWindow(this);
-      map.setCenter(marker.getPosition());
-
     });
   };
 
@@ -276,6 +274,16 @@ var ViewModel = function() {
       largeInfowindow.marker = marker;
       largeInfowindow.setContent(infowindowData);
       largeInfowindow.open(map, marker);
+
+      // Animate selected marker
+      if (marker.getAnimation() !== null) {
+        marker.setAnimation(null);
+      } else {
+        marker.setAnimation(google.maps.Animation.BOUNCE);
+        setTimeout(function(){ marker.setAnimation(null);
+        }, 1400);
+      }
+
 
       // Make sure the marker property is cleared if the infowindow is closed.
       largeInfowindow.addListener('closeclick', function() {

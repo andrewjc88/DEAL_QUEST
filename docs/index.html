@@ -33,22 +33,28 @@
       </div>
 
       <div class="off-canvas-content" data-off-canvas-content>
-        <div class=" top-bar black stacked-for-small">
-
-          <!-- Title bar title -->
-          <div class="top-bar-left">
-            <button type="button" class="menu-icon" data-toggle="revealPanel"></button>
-            <span class="title-bar-title large-centered">DE∆L&nbspQUE$T</span>
-          </div>
+        <div data-sticky-container>
           
-          <!-- Title bar zip code input -->
-          <div class="top-bar-right ">
-            <ul class="menu">
-              <li><input data-bind="value: zipInput" type="search" placeholder="City or Zip Code"></li>
-              <li><button data-bind="click: newLoc" type="button" class="button">Get Deals!</button></li>
-            </ul>
+          <div class=" title-bar  stacked-for-small" data-sticky data-options="marginTop:0;" style="width:100%">
+
+            <!-- Title bar title -->
+            <div class="title-bar-left">
+              <button type="button" class="menu-icon" data-toggle="revealPanel"></button>
+              <span class="title-bar-title large-centered">DE∆L&nbspQUE$T</span>
+            </div>
+            
+            <!-- Title bar zip code input -->
+            <div class="top-bar-right">
+              <ul class="menu">
+                <li><input data-bind="value: zipInput" type="search" placeholder="City or Zip Code"></li>
+                <li><button data-bind="click: newLoc" type="button" class="button">Get Deals!</button></li>
+              </ul>
+            </div>
           </div>
+
         </div>
+
+        <!-- Map body node -->
         <div class="responsive-embed " id="map"></div>
       </div>
     </div>
