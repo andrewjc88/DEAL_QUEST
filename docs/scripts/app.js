@@ -314,6 +314,10 @@ var ViewModel = function() {
 
 };
 
+var mapLoadError = function(){
+  alert("Google Maps API Failed to load!");
+};
+
 
 
 
