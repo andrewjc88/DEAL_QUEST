@@ -1,11 +1,14 @@
 #map {
-    height: 94vh;
+    height: 93vh;
+    margin: 0;
+    margin: 0;
 }
-html, body {
+/* html, body {
     height: 100%;
+    
     margin: 0;
     padding: 0;
-}
+} */
 #largeInfowindow {
     max-width: 400px;
     max-height: 200px;
