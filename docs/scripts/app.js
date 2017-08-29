@@ -12,7 +12,9 @@ function initMap() {
   
   // map styles
   var styles = [
-      {elementType: 'geometry', stylers: [{color: '#242f3e'}]},
+    
+      {
+        elementType: 'geometry', stylers: [{color: '#242f3e'}]},
       {elementType: 'labels.text.stroke', stylers: [{color: '#242f3e'}]},
       {elementType: 'labels.text.fill', stylers: [{color: '#746855'}]},
       {
@@ -96,7 +98,12 @@ function initMap() {
     center: initLoc,
     zoom: 10,
     styles: styles,
-    mapTypeControl: false
+    mapTypeControl: false,
+    zoomControl: true,
+    zoomControlOptions: {
+        position: google.maps.ControlPosition.LEFT_CENTER
+    },
+    streetViewControl: false    
   });
 
   var vm = new ViewModel();
