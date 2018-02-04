@@ -22,7 +22,5 @@ I built this app using:
 * Knockout.js - VMMV controller.
 * Google maps javascript api.
 * Groupon deals ajax api. 
-## Why?
-This is project 5 of the Udacity Nano Degree prgram. 
-https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001
+
 
